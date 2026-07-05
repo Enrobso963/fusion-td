@@ -41,10 +41,21 @@ func _ready() -> void:
 	print("An arrow does ", rat_arrow, " damage to Rats")
 	print("An orb does ", rat_orb, " damage to Rats")
 	
+	for i in range(10):
+		print("Spawing rat #", i+1)
+	
+	var limit = max_health
+	var hits: int = 0
+	
+	while limit > 0:
+		limit = apply_damage(limit, igor_arrow)
+		hits += 1
+	print("It takes ", hits, " arrows to kill ", enemy_name)
+	
 func calculate_dps(tower_damage: int, attack_per_second: float) -> float:
 	var damage_per_second = tower_damage * attack_per_second
 	return damage_per_second
-		
+	
 func apply_damage(current_health: int, damage: int) -> int:
 	var remaining = current_health - damage
 	return remaining
@@ -52,9 +63,9 @@ func apply_damage(current_health: int, damage: int) -> int:
 func resolve_damage(damage: int, damage_type: String, defence: String) -> int:
 	var received: int
 	if defence == "armoured" and damage_type == "physical":
-		received = damage * 0.5
+		received = damage / 2
 	elif defence == "warded" and damage_type == "magic":
-		received = damage * 0.5
+		received = damage / 2
 	else:
 		received = damage
 	return received
