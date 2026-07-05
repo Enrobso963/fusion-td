@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dbp8hajkikmo2"]
+
+[ext_resource type="Script" uid="uid://b8l8qve3x2r6n" path="res://sanbox.gd" id="1_sd5ms"]
+
+[node name="Sanbox" type="Node" unique_id=865357712]
+script = ExtResource("1_sd5ms")
