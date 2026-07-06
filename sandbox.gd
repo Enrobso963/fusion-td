@@ -76,11 +76,7 @@ func _ready() -> void:
 	
 	rat["can_fly"] = false
 	
-	print("Rat:")
-	print("HP: ", rat["health"])
-	print("Speed: ", rat["speed"])
-	print("Armour Type: ", rat["defence"])
-	print("Flying: ", rat["can_fly"])
+	print(rat)
 	
 func calculate_dps(tower_damage: int, attack_per_second: float) -> float:
 	var damage_per_second = tower_damage * attack_per_second
