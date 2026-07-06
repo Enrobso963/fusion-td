@@ -42,7 +42,7 @@ func _ready() -> void:
 	print("An orb does ", rat_orb, " damage to Rats")
 	
 	for i in range(10):
-		print("Spawing rat #", i+1)
+		print("Spawning rat #", i+1)
 	
 	var limit = max_health
 	var hits: int = 0
@@ -51,6 +51,36 @@ func _ready() -> void:
 		limit = apply_damage(limit, igor_arrow)
 		hits += 1
 	print("It takes ", hits, " arrows to kill ", enemy_name)
+	
+	var wave: Array = ["Rat", "Rat", "Rat", "Demon", "Demon"]
+	
+	print("The next wave has ", wave.size(), " enemies coming your way.")
+	
+	wave.append("Igor")
+	
+	print("Igor has arrived!!!")
+	print("The next wave now has ", wave.size(), " enemies coming your way.")
+	
+	print("The wave has arrived:")
+	for enemy in wave:
+		print("Spawning: ", enemy)
+	
+	var rat: Dictionary = {
+		"health": 10,
+		"speed": 180.0,
+		"defence": "unarmoured" 
+	}
+	
+	print("Rats are much weaker than Igor, with a HP of: ", rat["health"], " and they are ", rat["defence"])
+	print("However, they are much faster, with a speed of: ", rat["speed"])
+	
+	rat["can_fly"] = false
+	
+	print("Rat:")
+	print("HP: ", rat["health"])
+	print("Speed: ", rat["speed"])
+	print("Armour Type: ", rat["defence"])
+	print("Flying: ", rat["can_fly"])
 	
 func calculate_dps(tower_damage: int, attack_per_second: float) -> float:
 	var damage_per_second = tower_damage * attack_per_second
