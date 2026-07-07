@@ -5,6 +5,7 @@
 
 [node name="PathFollow2D" type="PathFollow2D" unique_id=975260691]
 rotation = 0.007853241
+loop = false
 script = ExtResource("1_1f0kj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1340253086]

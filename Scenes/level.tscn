@@ -13,3 +13,6 @@ script = ExtResource("1_tumq0")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1022474262]
 curve = SubResource("Curve2D_81xng")
+
+[node name="Timer" type="Timer" parent="." unique_id=1412173456]
+autostart = true
