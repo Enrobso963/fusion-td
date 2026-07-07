@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://cwm0u2k66g8t7"]
 
-[ext_resource type="Script" uid="uid://dvin24idwl7wg" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Script" uid="uid://dhr8xjijkpg5u" path="res://Scripts/path_follow_2d.gd" id="1_1f0kj"]
 [ext_resource type="Texture2D" uid="uid://d0qycvjiwvl1h" path="res://icon.svg" id="2_afpow"]
 
-[node name="Enemy" type="Node2D" unique_id=70960116]
+[node name="PathFollow2D" type="PathFollow2D" unique_id=975260691]
+rotation = 0.007853241
 script = ExtResource("1_1f0kj")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=629744798]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1340253086]
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_afpow")

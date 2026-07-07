@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ci70r5rclv8u1"]
 
-[ext_resource type="Script" uid="uid://dhr8xjijkpg5u" path="res://Scripts/path_follow_2d.gd" id="1_k5f4k"]
-[ext_resource type="Texture2D" uid="uid://d0qycvjiwvl1h" path="res://icon.svg" id="2_6phgx"]
+[ext_resource type="PackedScene" uid="uid://cwm0u2k66g8t7" path="res://Scenes/enemy.tscn" id="1_tumq0"]
 
 [sub_resource type="Curve2D" id="Curve2D_81xng"]
 _data = {
@@ -14,11 +13,6 @@ point_count = 11
 [node name="Path2D" type="Path2D" parent="." unique_id=1022474262]
 curve = SubResource("Curve2D_81xng")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=54232104]
+[node name="PathFollow2D" parent="Path2D" unique_id=975260691 instance=ExtResource("1_tumq0")]
 position = Vector2(-1, 58)
-rotation = 0.007853241
-script = ExtResource("1_k5f4k")
-
-[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=1438009127]
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_6phgx")
+speed = 275.0
