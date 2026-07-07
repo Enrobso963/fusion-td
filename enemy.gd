@@ -1,7 +1,10 @@
 extends Node2D
 
+var speed: float = 100.0
+
 func _ready() -> void:
-	print("Enemy spawned.")
+	position = Vector2(50, 0)
 
 func _process(delta: float) -> void:
-	pass
+	position.x += speed * delta
+	position.y += (speed / 2) * delta

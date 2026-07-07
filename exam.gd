@@ -45,7 +45,7 @@ func _ready() -> void:
 	
 	for enemy in wave:
 		var hits = 0
-		var remaining = enemy["health"]
+		var remaining:int = enemy["health"]
 		while remaining > 0:
 			remaining = apply_damage(remaining, resolve_damage(arrow_tower["damage"], arrow_tower["type"], enemy["defence"]))
 			hits += 1
