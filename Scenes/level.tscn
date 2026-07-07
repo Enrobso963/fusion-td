@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ci70r5rclv8u1"]
 
-[ext_resource type="PackedScene" uid="uid://cwm0u2k66g8t7" path="res://Scenes/enemy.tscn" id="1_tumq0"]
+[ext_resource type="Script" uid="uid://dk4cyf34i4awq" path="res://Scripts/level.gd" id="1_tumq0"]
 
 [sub_resource type="Curve2D" id="Curve2D_81xng"]
 _data = {
@@ -9,10 +9,7 @@ _data = {
 point_count = 11
 
 [node name="Level" type="Node2D" unique_id=206611983]
+script = ExtResource("1_tumq0")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1022474262]
 curve = SubResource("Curve2D_81xng")
-
-[node name="PathFollow2D" parent="Path2D" unique_id=975260691 instance=ExtResource("1_tumq0")]
-position = Vector2(-1, 58)
-speed = 275.0
