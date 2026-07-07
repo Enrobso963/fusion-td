@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://cs3v38q0htks"]
-
-[ext_resource type="Script" uid="uid://b8l8qve3x2r6n" path="res://sandbox.gd" id="1_3h184"]
-
-[node name="Sandbox" type="Node" unique_id=865357712]
-script = ExtResource("1_3h184")
